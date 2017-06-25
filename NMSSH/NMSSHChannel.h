@@ -107,7 +107,9 @@ typedef NS_ENUM(NSInteger, NMSSHChannelType)  {
  @returns Shell command response
  */
 - (NSString *)execute:(NSString *)command error:(NSError **)error timeout:(NSNumber *)timeout;
-
+- (NSData *)executeBinary:(NSString *)command
+                    error:(NSError *__autoreleasing *)error
+                  timeout:(NSNumber *)timeout;
 /// ----------------------------------------------------------------------------
 /// @name Remote shell session
 /// ----------------------------------------------------------------------------
